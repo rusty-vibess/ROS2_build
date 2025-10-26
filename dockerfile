@@ -21,6 +21,8 @@ RUN apt-get update && apt-get install -y \
     lsb-release \
     gnupg \
     vim \
+    iproute2 \
+    netcat \
     && rm -rf /var/lib/apt/lists/*
 
 # Hardware acceleration tooling
@@ -57,6 +59,7 @@ SHELL ["/bin/bash","-lc"]
 # Run setup
 COPY scripts/setup.sh /usr/scripts/setup.sh
 RUN bash /usr/scripts/setup.sh
+COPY etc/ /etc/
 
 WORKDIR /workspace
 CMD ["bash"]

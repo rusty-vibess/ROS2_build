@@ -17,6 +17,7 @@ mkdir -p $XDG_RUNTIME_DIR
 chmod 700 $XDG_RUNTIME_DIR' >> ~/.bashrc
 
 echo 'export DEFAULT_IFACE="$(ip route get 1.1.1.1 | awk '\''/dev/ {print $5; exit}'\'')" ' >> ~/.bashrc
+echo "source ~/turtlebot3_ws/install/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 echo 'Setup complete...'

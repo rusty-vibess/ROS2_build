@@ -1,7 +1,9 @@
 <CycloneDDS>
     <Domain id="any">
         <General>
-            <NetworkInterfaceAddress>auto</NetworkInterfaceAddress>
+            <Interfaces>
+                <NetworkInterface name="${DEFAULT_IFACE}" />
+            </Interfaces>
         </General>
     </Domain>
 </CycloneDDS>

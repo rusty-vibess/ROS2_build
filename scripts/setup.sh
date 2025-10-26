@@ -16,7 +16,7 @@ echo 'export XDG_RUNTIME_DIR=/tmp/runtime-root
 mkdir -p $XDG_RUNTIME_DIR
 chmod 700 $XDG_RUNTIME_DIR' >> ~/.bashrc
 
-
+echo 'export DEFAULT_IFACE="$(ip route get 1.1.1.1 | awk '\''/dev/ {print $5; exit}'\'')" ' >> ~/.bashrc
 source ~/.bashrc
 
 echo 'Setup complete...'
